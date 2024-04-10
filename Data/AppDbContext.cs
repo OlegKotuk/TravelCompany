@@ -17,10 +17,8 @@ namespace eTickets.Data
             modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Actor).WithMany(am => am.Actors_Movies).HasForeignKey(m => m.ActorId);
             base.OnModelCreating(modelBuilder);
         }
-        public DbSet<Actor> Actors { get; set; }
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<Actor_Movie> Actors_Movies { get; set; }
-        public DbSet<Cinema> Cinemas { get; set; }
-        public DbSet<Producer> Producers { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Toure> Toures { get; set; }
     }
 }
